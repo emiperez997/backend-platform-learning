@@ -33,10 +33,29 @@ pnpm install
 docker-compose up -d
 ```
 
+4. Ejecutar el siguiente comando para inicializar la base de datos
+
+```bash
+npx prisma migrate dev
+```
+
+5. Insertar el siguiente usuario dentro de la db con pgadmin (o en su defecto DBeaver)
+
+```json
+{
+    "email": "emiperez@admin.com",
+    "password": "$2b$10$lIFZv7eQ.5ALqeQLZTRADO8cPcpeFX2CziSobsUWoE98dPCSdPgRW",
+    
+    "role": "admin"
+}
+```
+
 4. Iniciar el servidor de backend con `pnpm run start`
 
 ```bash
-pnpm run start
+pnpm start
+# o 
+pnpm start:dev
 ```
 
 ## Funcionalidades
